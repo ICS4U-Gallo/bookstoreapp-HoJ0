@@ -2,6 +2,8 @@ package controllers;
 
 import play.mvc.*;
 
+import views.html.Home.*;
+
 /**
  * This controller contains an action to handle HTTP requests
  * to the application's home page.
@@ -9,7 +11,7 @@ import play.mvc.*;
 public class HomeController extends Controller {
 
     /**
-     * An action that renders an HTML page with a welcome message.
+     * An action that renders an HTML page with a welcome.scala.html message.
      * The configuration in the <code>routes</code> file means that
      * this method will be called when the application receives a
      * <code>GET</code> request with a path of <code>/</code>.
@@ -19,6 +21,6 @@ public class HomeController extends Controller {
     }
 
     public Result welcome(String name, String lastName) {
-        return ok("Hi, " + name + " " + lastName + "! Welcome to our website.");
+        return ok(welcome.render(name, lastName));
     }
 }
