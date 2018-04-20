@@ -25,7 +25,7 @@ public class BooksController extends Controller {
     public Result update(){
         return TODO;
     }
-    public Result destory(Integer id){
+    public Result destroy(Integer id){
         return TODO;
     }
 
